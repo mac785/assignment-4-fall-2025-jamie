@@ -1,0 +1,6 @@
+## Member scheduler generator test cases
+-  test1:
+    name: Single member schedule generator test
+    points: 10
+    input: [{'name': 'Albert Kaplan', 'classes': {'Mon': 2, 'Tue': 3, 'Wed': 2, 'Thu': 3, 'Fri': 2}},
+    {'name': 'Sherri Strickland', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}}]

@@ -1,0 +1,42 @@
+## Group scheduler generator test cases
+-  test:
+    name: Single meeting scheduler
+    points: 10
+    input: [{'name': 'Albert Kaplan', 'classes': {'Mon': 2, 'Tue': 3, 'Wed': 2, 'Thu': 3, 'Fri': 2}},
+    {'name': 'Sherri Strickland', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}}, 
+    {'name': 'Linda Ruiz', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}}, 
+    {'name': 'Jen Madden', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}}, 
+    {'name': 'Katherine Medina', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}}, 
+    {'name': 'Herbert Woodard', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}}, 
+    {'name': 'Kelli Underwood', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}}, 
+    {'name': 'Katie Gaines', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}},
+    {'name': 'Rochelle Boone', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}},
+    {'name': 'Sabrina Hart', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}},
+    {'name': 'Debbie Trujillo', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}},
+    {'name': 'Lydia May', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}},
+    {'name': 'Wendell Kelly', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}},
+    {'name': 'Jan Serrano', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}},
+    {'name': 'Inez Barrett', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}},
+    {'name': 'Deb Shah', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}},
+    {'name': 'Hope Glover', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}},
+    {'name': 'Ruben Forbes', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}},
+    {'name': 'Alice Parsons', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}},
+    {'name': 'Ira McGuire', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}},
+    {'name': 'Viola Caldwell', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}},
+    {'name': 'Annie Gilbert', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}},
+    {'name': 'Laurie Carroll', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}},
+    {'name': 'Kristin Holder', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}},
+    {'name': 'Lindsay Munoz', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}},
+    {'name': 'Terrance Bates', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}},
+    {'name': 'Yvonne Glass', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}},
+    {'name': 'Al Clements', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}},
+    {'name': 'Shelia Porter', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}},
+    {'name': 'Mae Tate', 'classes': {'Mon': 3, 'Tue': 2, 'Wed': 3, 'Thu': 2, 'Fri': 3}},]
+    input2: {'Mon': [1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0],
+    'Tue': [1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0],
+    'Wed': [0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1],
+    'Thu': [1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1],
+    'Fri': [0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]}
+    input3: {"ME396 Project discussion with G1" : [60, ["Albert Kaplan", "Sherri Strickland", "Linda Ruiz", "Jen Madden", "Katherine Medina", "Deb Shah", "Hope Glover", "Ruben Forbes", "Alice Parsons", "Ira McGuire", "Viola Caldwell", "Annie Gilbert", "Laurie Carroll", "Kristin Holder", "Lindsay Munoz", "Terrance Bates"]],
+    "ME396 Project discussion with G2" : [60, ["Inez Barrett", "Katie Gaines", "Herbert Woodard", "Rochelle Boone", "Sabrina Hart", "Yvonne Glass", "Al Clements", "Shelia Porter", "Wendell Kelly"]],
+    "ME396 Project discussion with G3" : [60, ["Jan Serrano", "Sherri Strickland", "Debbie Trujillo", "Lydia May", "Wendell Kelly", "Herbert Woodard", "Katie Gaines"]]}
