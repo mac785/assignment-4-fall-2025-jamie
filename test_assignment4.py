@@ -13,16 +13,18 @@ import traceback
 
 # module import: spec1: memberScheduler  spec2: groupScheduler  spec3: MeetingScheduler
 
-# path  = os.getcwd() + '/' + 'assignment4-main.py' #linux, mac user
-path1  = os.getcwd() + '\\' + 'memberScheduler.py' #windows user
+path1  = os.getcwd() + '/' + 'memberScheduler.py' #linux, mac user
+# path1  = os.getcwd() + '\\' + 'memberScheduler.py' #windows user
 spec1 = importlib.util.spec_from_file_location("memberScheduler", path1)
 my_script1 = importlib.util.module_from_spec(spec1)
 
-path2  = os.getcwd() + '\\' + 'groupScheduler.py' #windows user
+path2  = os.getcwd() + '/' + 'groupScheduler.py' #linux, mac user
+# path2  = os.getcwd() + '\\' + 'groupScheduler.py' #windows user
 spec2 = importlib.util.spec_from_file_location("groupScheduler", path2)
 my_script2 = importlib.util.module_from_spec(spec2)
 
-path3  = os.getcwd() + '\\' + 'scheduleOptimizer.py' #windows user
+path3  = os.getcwd() + '/' + 'scheduleOptimizer.py' #linux, mac user
+# path3  = os.getcwd() + '\\' + 'scheduleOptimizer.py' #windows user
 spec3 = importlib.util.spec_from_file_location("scheduleOptimizer", path3)
 my_script3 = importlib.util.module_from_spec(spec3)
 
@@ -62,6 +64,14 @@ def test_Q1_member_schedule_generator():
                 try:
                     instane_member_schedule = my_script1.personSchedule(**kwargs1)
                     instane_member_schedule.view_schedule()
+
+                    time_dict_input = {'day': 'Wed', 'time': {'from': '09:30', 'to': '10:30'}}
+
+                    instane_member_schedule.add_event(time_dict_input)
+                    instane_member_schedule.view_schedule()
+                    instane_member_schedule.del_event(time_dict_input)
+                    instane_member_schedule.view_schedule()
+
                 except Exception as ex:
                     print('\n\nEXCEPTION THROWN WHILE RUNNING FUNCTION:')
                     print(type(ex).__name__,': ',ex, end='\n\n', sep='')
@@ -146,6 +156,6 @@ def test_Q5_group_schedule_optimizer():
             
 if __name__ == '__main__':
 
-    # test_Q1_member_schedule_generator()
+    test_Q1_member_schedule_generator()
     # test_Q2_group_schedule_generator()
-    test_Q5_group_schedule_optimizer()
+    # test_Q5_group_schedule_optimizer()
